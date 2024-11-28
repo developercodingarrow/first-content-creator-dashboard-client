@@ -1,0 +1,8 @@
+.content_layout {
+  padding: 23px;
+}
+
+.fillter_table_wrapper {
+  box-shadow: var(--th-box-shadow);
+  border-radius: 8px;
+}

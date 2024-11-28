@@ -1,0 +1,89 @@
+.btn_style {
+  height: auto;
+  background-color: var(--th-primary-color);
+  outline: none;
+  border: none;
+  color: var(--th-body-background);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Button sizes */
+.small {
+  font-size: 14px;
+  padding: 8px 10px; /* Smaller padding for small buttons */
+  border-radius: 5px;
+}
+
+.circle_medium_iconBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 5px 0px 0px 0px;
+}
+
+.medium {
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 5px;
+}
+
+.large {
+  font-size: 18px;
+  padding: 12px 14px;
+  border-radius: 5px;
+}
+
+/* Full width button */
+.fullWidth {
+  width: 100%;
+}
+
+/* Spinner */
+.spinner {
+  border: 3px solid var(--th-primary-color);
+  border-top: 3px solid #ffffffef;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+}
+
+/* Hide text when loading */
+.btn_style span {
+  opacity: 1; /* Default: Show text */
+}
+
+.btn_style.loading span {
+  opacity: 0; /* Hide text during loading */
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover and disabled styles */
+.btn_style:hover:not([disabled]) {
+  background-color: var(--th-primary-hover-color);
+}
+
+.btn_style:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

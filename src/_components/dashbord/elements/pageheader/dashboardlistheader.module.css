@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--th-body-background);
+  border: var(--th-thin-gray-border);
+  padding: 20px;
+  border-radius: 8px; /* Optional for rounded corners */
+  box-shadow: var(--th-box-shadow);
+}

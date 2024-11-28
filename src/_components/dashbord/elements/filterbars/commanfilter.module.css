@@ -1,0 +1,18 @@
+.flext_sb_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--th-body-background);
+  border: var(--th-thin-gray-border);
+  padding: 10px;
+  border-radius: 8px 0px;
+}
+
+.left_side {
+  display: flex;
+}
+
+.table_search_wrapper {
+  /* border: 1px solid gray; */
+  width: 200px;
+}

@@ -1,0 +1,73 @@
+/* TableBooleanStatus */
+
+.status {
+  text-transform: capitalize;
+}
+
+.active {
+  color: var(--th-booleanTrue-statusColor);
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 14px;
+  background-color: var(--th-booleanTrue-statusBg);
+}
+
+.pending {
+  color: var(--th-booleanFalse-statusColor);
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 14px;
+  background-color: var(--th-booleanFalse-statusBg);
+}
+
+/* TableBooleanSwitchBtn */
+
+.switch {
+  position: relative;
+  width: 30px; /* Reduced width */
+  height: 16px; /* Reduced height */
+  background-color: var(--th-booleanFalse-statusColor);
+  border-radius: 8px; /* Adjusted for smaller height */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch-circle {
+  position: absolute;
+  top: 1px; /* Adjusted for smaller height */
+  left: 1px; /* Adjusted for smaller width */
+  width: 14px; /* Reduced circle size */
+  height: 14px; /* Reduced circle size */
+  background-color: var(--th-body-background);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch-active {
+  background-color: var(--th-booleanTrue-statusColor);
+}
+
+.switch-active .switch-circle {
+  transform: translateX(14px); /* Adjusted for smaller width */
+}
+
+/* TablePopulatedText */
+.small_bold_text {
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #1a1b2d;
+  font-size: 15px;
+}
+
+/* TablePageRedirect */
+.view_link {
+  font-size: 14px;
+  display: inline-block;
+  color: black;
+}
+
+.view_link:hover {
+  color: var(--th-primary-color);
+}

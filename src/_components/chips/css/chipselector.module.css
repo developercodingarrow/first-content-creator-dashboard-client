@@ -1,0 +1,56 @@
+.main_conatiner {
+  padding: 5px;
+}
+
+.container {
+  width: 100%;
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  color: #fff;
+  position: relative !important;
+}
+
+.tagContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background-color: rgb(236, 242, 255);
+  color: rgb(93, 135, 255);
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.removeChip {
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.input_wrapper {
+  display: inline-block;
+}
+
+.input {
+  padding: 8px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  font-family: var(--th-font-family);
+  font-size: var(--th-font-small-size);
+  color: gray;
+  letter-spacing: var(--th-letter-spacing);
+  border: none;
+}

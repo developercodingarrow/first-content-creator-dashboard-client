@@ -1,0 +1,22 @@
+.small_bold_text {
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #1a1b2d;
+  font-size: 15px;
+}
+
+.small_light_text {
+  color: #535763;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.small_bold_text_table_cell {
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #1a1b2d;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}

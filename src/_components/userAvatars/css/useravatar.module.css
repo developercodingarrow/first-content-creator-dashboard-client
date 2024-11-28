@@ -1,0 +1,31 @@
+.user_inLine_avatar {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.user_img_wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.header_avtar_wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.navbar_avtar_wrapper {
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.hide_element_collapsed {
+  display: none;
+}

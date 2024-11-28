@@ -1,0 +1,34 @@
+.aside_nav_item {
+  display: flex;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  margin-bottom: 0px;
+  color: #535763;
+}
+
+.aside_nav_item:hover {
+  background-color: #6759ff;
+  color: #fff;
+}
+
+.nav_item_left {
+  display: flex;
+  column-gap: 6px;
+}
+
+.nav_item_menu_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_item_menu_text {
+  display: flex;
+  align-items: center;
+  transition: display 0.3s ease;
+}
+
+.hide_element_collapsed {
+  display: none;
+}

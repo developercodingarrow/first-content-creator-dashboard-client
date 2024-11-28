@@ -1,0 +1,13 @@
+.input {
+  padding: 8px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  font-family: var(--th-font-family);
+  font-size: var(--th-font-small-size);
+  color: gray;
+  letter-spacing: var(--th-letter-spacing);
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+  padding: 15px 10px;
+}
