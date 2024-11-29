@@ -9,7 +9,6 @@
   border-color: #0000;
   border-radius: 5px;
   padding: 5px 6.5px;
-  font-size: 14px;
   background-color: var(--th-booleanTrue-statusBg);
 }
 
@@ -18,7 +17,6 @@
   border-color: #0000;
   border-radius: 5px;
   padding: 5px 6.5px;
-  font-size: 14px;
   background-color: var(--th-booleanFalse-statusBg);
 }
 
@@ -53,21 +51,12 @@
   transform: translateX(14px); /* Adjusted for smaller width */
 }
 
-/* TablePopulatedText */
-.small_bold_text {
-  line-height: 24px;
-  letter-spacing: 1px;
-  color: #1a1b2d;
-  font-size: 15px;
-}
-
 /* TablePageRedirect */
 .view_link {
-  font-size: 14px;
   display: inline-block;
-  color: black;
+  color: var(--th-primary-color);
 }
 
 .view_link:hover {
-  color: var(--th-primary-color);
+  color: var(--th-primary-hover-color);
 }

@@ -24,7 +24,9 @@ export default function AsideNavItemClick() {
             <div className={styles.nav_item_left}>
               <div className={styles.nav_item_menu_icon}> {el.icon}</div>
               <div
-                className={`${styles.nav_item_menu_text} ${
+                className={`${
+                  styles.nav_item_menu_text
+                } medium_semi_bold_text  ${
                   isSidebarCollapsed ? styles.hide_element_collapsed : ""
                 }`}
               >

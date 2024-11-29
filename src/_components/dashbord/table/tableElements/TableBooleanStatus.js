@@ -5,7 +5,7 @@ export default function TableBooleanStatus(props) {
   return (
     <div>
       <span
-        className={`${styles.status} ${
+        className={`${styles.status} tiny_normall_text ${
           data ? styles.active : styles.pending
         }  `}
       >

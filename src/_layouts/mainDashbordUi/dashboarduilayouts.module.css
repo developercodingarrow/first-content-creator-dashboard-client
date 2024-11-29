@@ -7,10 +7,11 @@
   background-color: var(--th-primary-color);
   height: 50px;
   position: fixed;
-  margin-left: 250px;
-  width: calc(100% - 250px); /* Add spaces around the minus operator */
+  margin-left: 300px;
+  width: calc(100% - 300px); /* Add spaces around the minus operator */
   transition: margin-left width 0.3s ease;
   padding: 0px 10px;
+  z-index: 8;
 }
 
 .navbar_wrapper_collapsed {
@@ -19,7 +20,7 @@
 }
 
 .asidbar_wrapper {
-  width: 250px;
+  width: 300px;
   background-color: var(--th-transparent);
   border-right: 1px var(--ad-border-color);
   transition: width 0.3s;
@@ -42,6 +43,7 @@
   background-color: var(--th-body-background);
   transition: width 0.3s ease;
   box-shadow: var(--th-box-shadow);
+  z-index: 9;
 }
 
 .asidebar_inner_collapsed {
@@ -52,7 +54,7 @@
 }
 
 .children_wrapper {
-  margin-left: 250px;
+  margin-left: 300px;
   padding-top: 50px;
   transition: margin-left 0.3s ease;
 }
@@ -68,6 +70,8 @@
   .navbar_wrapper {
     margin-left: 0px;
     width: 100%;
+    height: 40px;
+    padding: 0px 0px;
   }
   .navbar_wrapper_collapsed {
     margin-left: 0px;
@@ -83,10 +87,11 @@
     left: -50px;
   }
   .asidebar_inner_wrapper {
-    width: 90%;
+    width: 70%;
     height: 100%;
     background-color: var(--th-body-background);
     transition: width 0.3s ease;
+    z-index: 9;
   }
   .asidebar_inner_collapsed {
     width: 0%;

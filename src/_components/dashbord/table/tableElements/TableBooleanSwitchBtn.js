@@ -4,7 +4,6 @@ import styles from "./css/tableelements.module.css";
 export default function TableBooleanSwitchBtn(props) {
   const { data, keyProp, completeData, handler } = props;
   const [isActive, setIsActive] = useState(data);
-  console.log("data----", data);
   const toggleSwitch = () => {
     handler(completeData._id);
     setIsActive(!isActive);

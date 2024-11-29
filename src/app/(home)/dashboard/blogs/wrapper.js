@@ -19,7 +19,7 @@ export default function BlogListwrapper() {
       <div>
         <DashBordListHeader listTitle="Blogs List " />
       </div>
-      <div className={styles.content_layout}>
+      <div className={"content_layout"}>
         <div className={styles.fillter_table_wrapper}>
           <div>
             <CommanListFilter />

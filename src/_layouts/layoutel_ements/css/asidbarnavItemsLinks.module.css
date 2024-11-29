@@ -3,11 +3,16 @@
   border-radius: 8px;
   padding: 12px;
   cursor: pointer;
-  margin-bottom: 0px;
-  color: #535763;
+  color: var(--th-text-gray);
+  margin-bottom: 5px;
 }
 
 .aside_nav_item:hover {
+  background-color: #6759ff;
+  color: #fff;
+}
+
+.active_link {
   background-color: #6759ff;
   color: #fff;
 }
@@ -31,4 +36,12 @@
 
 .hide_element_collapsed {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .aside_nav_item {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 3px;
+  }
 }

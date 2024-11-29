@@ -141,21 +141,23 @@ const renderCellContent = (
       className = "numberCell";
       break;
     case "text":
-      content = <TextElements text={elemnetdata} textStyle="small_bold_text" />;
+      content = (
+        <TextElements text={elemnetdata} textStyle="medium_normall_text " />
+      );
       className = "";
       break;
     case "blodText":
       content = (
         <TextElements
           text={elemnetdata}
-          textStyle="small_bold_text_table_cell"
+          textStyle="medium_normall_text capitalize_text"
         />
       );
       className = "text-cell";
       break;
     case "booleanStatus":
       content = <TableBooleanStatus data={elemnetdata} />;
-      className = "text-cell";
+      className = "boolean_status_cell";
       break;
     case "booleanSwicthBtn":
       if (handler) {
@@ -168,6 +170,7 @@ const renderCellContent = (
           />
         );
       }
+      className = "boolean_switch_cell";
       break;
 
     case "populatedText":
@@ -175,7 +178,7 @@ const renderCellContent = (
         <TablePopulatedText
           data={elemnetdata}
           filed={completecolumnFiled.filed}
-          textStyle="small_bold_text"
+          textStyle="medium_normall_text"
         />
       );
       className = "text-cell";

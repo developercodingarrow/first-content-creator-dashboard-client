@@ -2,6 +2,7 @@
   background-color: var(--th-primary-color);
   width: 100%;
   height: 50px;
+  z-index: 9;
 }
 .inner_sb_container {
   width: 100%;
@@ -9,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* overflow: hidden; */
   padding-left: 0px 10px;
   padding-right: 20px;
 }
@@ -40,12 +40,12 @@
   justify-content: center;
   padding: 10px;
   cursor: pointer;
-  color: #fff;
-  font-size: 18px;
+  color: var(--th-body-background);
+  font-size: 20px;
 }
 
 .NavBar_hanbug_icon_Wrapper:hover {
-  background-color: #fff;
+  background-color: var(--th-body-background);
   color: var(--th-primary-color);
   border-radius: 5px;
 }
@@ -57,12 +57,12 @@
 .navBar_link_icon_navItem {
   padding: 10px;
   cursor: pointer;
-  color: #fff;
-  font-size: 18px;
+  color: var(--th-body-background);
+  font-size: 20px;
 }
 
 .navBar_link_icon_navItem:hover {
-  background-color: #fff;
+  background-color: var(--th-body-background);
   color: var(--th-primary-color);
   border-radius: 5px;
 }
@@ -128,6 +128,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .main_container {
+    height: 50px;
+  }
   .inner_sb_container {
     padding-left: 0px;
     padding-right: 0px;
@@ -140,5 +143,12 @@
   }
   .navBar_user_avatar_wrapper {
     display: none;
+  }
+
+  .NavBar_hanbug_icon_Wrapper {
+    padding: 8px 5px;
+    cursor: pointer;
+    color: var(--th-body-background);
+    font-size: 18px;
   }
 }

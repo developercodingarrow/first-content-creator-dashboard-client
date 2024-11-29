@@ -81,3 +81,29 @@
 .editor_style {
   background-color: #ffff;
 }
+
+@media only screen and (max-width: 600px) {
+  .top_section {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2%;
+    row-gap: 10px;
+    box-sizing: border-box;
+  }
+  .section_left {
+    width: 100%;
+    box-shadow: var(--th-box-shadow);
+    border: var(--th-thin-gray-border);
+    border-radius: 8px;
+    padding: 24px;
+    box-sizing: border-box !important;
+  }
+
+  .section_right {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form_element_Box {
+    margin-bottom: 5px;
+  }
+}

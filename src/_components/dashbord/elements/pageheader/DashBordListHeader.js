@@ -4,7 +4,9 @@ export default function DashBordListHeader(props) {
   const { listTitle } = props;
   return (
     <div className={styles.container}>
-      <div className={styles.left_side}>{listTitle}</div>
+      <div className={""}>
+        <h2>{listTitle}</h2>
+      </div>
       <div>buttons</div>
     </div>
   );

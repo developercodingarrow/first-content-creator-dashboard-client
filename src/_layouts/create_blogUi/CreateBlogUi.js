@@ -170,6 +170,7 @@ export default function CreateBlogUi(props) {
       <div className={styles.section_header}>
         <ClickTextBtn
           btnText="Publish"
+          size="medium"
           disabledBtn={formIsValid}
           btnLoading={false}
           clickHandel={handelUpdateContent}

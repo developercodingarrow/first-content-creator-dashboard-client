@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { inter, roboto, poppins, montserrat } from "../fonts/fonts";
 import "../globals.css";
 import dynamic from "next/dynamic";
 import DashboardUiLayouts from "@/_layouts/mainDashbordUi/DashboardUiLayouts";
@@ -8,16 +9,6 @@ import ImgModelContextProvider from "@/_contextApi/ImgModelContextApi";
 const DeleteModel = dynamic(() => import("@/_components/models/DeleteModel"), {
   ssr: false,
 });
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata = {
   title: "Create Next App",
@@ -27,8 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <body className={`${geistSans.variable} ${geistMono.variable}`}> */}
-      <body>
+      <body
+        className={`${inter.variable} ${roboto.variable} ${poppins.variable} ${montserrat.variable}`}
+      >
         <AppContextProvider>
           <ModelContextProvider>
             <ImgModelContextProvider>

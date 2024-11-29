@@ -18,8 +18,14 @@ export default function UserDetailsAvatar(props) {
           isSidebarCollapsed ? styles.hide_element_collapsed : ""
         }`}
       >
-        <TextElements text={name} textStyle="small_bold_text" />
-        <TextElements text={email} textStyle="small_light_text" />
+        <TextElements
+          text={name}
+          textStyle="medium_semi_bold_text text_color_black"
+        />
+        <TextElements
+          text={email}
+          textStyle="small_light_text text_color_gray"
+        />
       </div>
     </div>
   );

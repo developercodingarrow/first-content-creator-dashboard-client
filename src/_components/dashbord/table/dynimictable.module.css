@@ -17,12 +17,37 @@
 }
 
 .dynimic_table th {
-  background-color: #f4f3f5;
+  background-color: var(--th-gray-bg);
   font-weight: 400;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .numberCell {
-  color: var(--th-blod-gray-text);
+  color: var(--th-text-gray);
   width: 20px;
   text-align: center !important;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.boolean_status_cell {
+  width: 100px;
+}
+
+.boolean_switch_cell {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .dynimic_table th {
+    font-weight: 500;
+    font-size: 14px;
+  }
 }

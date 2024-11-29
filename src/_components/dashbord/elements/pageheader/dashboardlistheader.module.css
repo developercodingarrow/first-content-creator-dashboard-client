@@ -4,7 +4,13 @@
   align-items: center;
   background-color: var(--th-body-background);
   border: var(--th-thin-gray-border);
-  padding: 20px;
+  padding: 20px 25px;
   border-radius: 8px; /* Optional for rounded corners */
   box-shadow: var(--th-box-shadow);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px var(--th-layout-side-padding);
+  }
 }

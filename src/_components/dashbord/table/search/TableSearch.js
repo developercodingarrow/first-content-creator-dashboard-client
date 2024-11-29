@@ -11,7 +11,7 @@ export default function TableSearch() {
         <input
           type="text"
           placeholder="search..."
-          className={styles.search_input}
+          className={`${styles.search_input} small_light_text text_color_gray`}
         />
       </div>
     </div>

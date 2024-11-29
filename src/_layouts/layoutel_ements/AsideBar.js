@@ -31,7 +31,7 @@ export default function AsideBar() {
           <UserDetailsAvatar name="Sanjay" email="email@gmail.com" />
           <div
             onClick={toggleSidebar}
-            className={`${styles.header_close} ${
+            className={`${styles.header_close} medium_semi_bold_text ${
               isSidebarCollapsed ? styles.hide_element_collapsed : ""
             }`}
           >
