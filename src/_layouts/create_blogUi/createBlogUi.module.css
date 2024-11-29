@@ -25,7 +25,6 @@
 
 .section_right {
   width: 38%;
-
   box-sizing: border-box;
 }
 .componenet_section {
@@ -92,18 +91,23 @@
   }
   .section_left {
     width: 100%;
-    box-shadow: var(--th-box-shadow);
-    border: var(--th-thin-gray-border);
-    border-radius: 8px;
-    padding: 24px;
-    box-sizing: border-box !important;
+    border-radius: 5px;
+    padding: 15px 10px;
   }
 
   .section_right {
     width: 100%;
     box-sizing: border-box;
+    border-radius: 5px;
+    padding: 15px 10px;
   }
   .form_element_Box {
     margin-bottom: 5px;
+  }
+
+  .componenet_section {
+    border-radius: 5px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
   }
 }

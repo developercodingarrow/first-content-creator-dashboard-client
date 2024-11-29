@@ -54,3 +54,19 @@
   letter-spacing: var(--th-letter-spacing);
   border: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .main_conatiner {
+    padding: 0px;
+  }
+
+  .container {
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

@@ -60,6 +60,7 @@ a {
 
 .content_layout {
   padding: 20px 20px;
+  margin-bottom: 50px;
 }
 
 .layout_children_wrapper {
@@ -155,6 +156,7 @@ h2 {
 @media only screen and (max-width: 600px) {
   .content_layout {
     padding: 10px var(--th-layout-side-padding);
+    margin-bottom: 100px;
   }
   .medium_semi_bold_text {
     font-size: 14px;
@@ -177,8 +179,8 @@ h2 {
   }
 
   .single_icon_wrapper {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     font-size: 14px;
   }
 }

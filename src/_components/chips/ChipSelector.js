@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./css/chipselector.module.css";
 import SuggestList from "@/_components/search_elements/SuggestList";
+import SimpleInput from "../elements/formelements/SimpleInput";
 export default function ChipSelector(props) {
   const { allList, filedName, placeholder } = props;
   const [newValue, setnewValue] = useState("");

@@ -9,6 +9,8 @@ import dummyImg from "../../../public/web-static image/Facebook-og-image.png";
 import Image from "next/image";
 import ModelHeader from "./modelElements/ModelHeader";
 import ImgUplodBox from "../imgUplod/ImgUplodBox";
+import SimpleInput from "../elements/formelements/SimpleInput";
+import SimpleTextArea from "../elements/formelements/SimpleTextArea";
 
 export default function SingleImgModel() {
   const {
@@ -25,6 +27,7 @@ export default function SingleImgModel() {
     handelChange,
     handleSave,
     isValid,
+    errors,
   } = useImageUpload();
 
   return (
@@ -68,33 +71,27 @@ export default function SingleImgModel() {
                           <label>Title</label>
                         </div>
                         <div className={styles.input_wrapper}>
-                          <input
-                            type="text"
-                            placeholder="Enter Image Title"
-                            className={styles.input_style}
-                            name="title"
-                            onChange={handelChange}
+                          <SimpleInput
+                            inputPlaceholder="Enter Image Title"
+                            inputName="title"
+                            inputChnageHandler={handelChange}
                           />
                         </div>
-                        <span className={styles.error_msg}>
-                          This is input error message
-                        </span>
+                        <span className={styles.error_msg}>{errors.title}</span>
                       </div>
                       <div className={styles.form_element_Box}>
                         <div className={styles.input_lable}>
                           <label>Alt</label>
                         </div>
                         <div className={styles.input_wrapper}>
-                          <input
-                            type="text"
-                            placeholder="Enter Image Alt text"
-                            className={styles.input_style}
-                            name="altText"
-                            onChange={handelChange}
+                          <SimpleInput
+                            inputPlaceholder="Enter Image Alt text"
+                            inputName="altText"
+                            inputChnageHandler={handelChange}
                           />
                         </div>
                         <span className={styles.error_msg}>
-                          This is input error message
+                          {errors.altText}
                         </span>
                       </div>
 
@@ -103,16 +100,14 @@ export default function SingleImgModel() {
                           <label>caption</label>
                         </div>
                         <div className={styles.input_wrapper}>
-                          <input
-                            type="text"
-                            placeholder="Enter Image caption"
-                            className={styles.input_style}
-                            name="caption"
-                            onChange={handelChange}
+                          <SimpleInput
+                            inputPlaceholder="Enter Image caption"
+                            inputName="caption"
+                            inputChnageHandler={handelChange}
                           />
                         </div>
                         <span className={styles.error_msg}>
-                          This is input error message
+                          {errors.caption}
                         </span>
                       </div>
 
@@ -121,23 +116,22 @@ export default function SingleImgModel() {
                           <label>Descreption</label>
                         </div>
                         <div className={styles.input_wrapper}>
-                          <textarea
-                            type="text"
-                            placeholder="Enter Image descreption"
-                            className={styles.input_style}
-                            name="description"
-                            onChange={handelChange}
+                          <SimpleTextArea
+                            inputPlaceholder="Enter Image caption"
+                            inputName="description"
+                            inputChnageHandler={handelChange}
                           />
                         </div>
                         <span className={styles.error_msg}>
-                          This is input error message
+                          {errors.description}
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className={styles.img_model_footer}>
-                  <div className={styles.model_footer_right}>
+                  <div className={styles.model_footer_left}>
+                    {/* model_footer_left */}
                     {previewImage && (
                       <div
                         className={`single_icon_wrapper`}
@@ -148,11 +142,12 @@ export default function SingleImgModel() {
                       </div>
                     )}
                   </div>
-                  <div className={styles.model_footer_left}>
+                  {/* model_footer_right */}
+                  <div className={styles.model_footer_right}>
                     <div>
                       <ClickTextBtn
                         btnText="save"
-                        size="small"
+                        size="medium"
                         btnLoading={false}
                         disabledBtn={isValid}
                       />

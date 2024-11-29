@@ -18,7 +18,7 @@ export default function ReactQuillElement(props) {
       formats={CreateEditorformats}
       onChange={inputChnageHandler}
       className={styles.editor_style}
-      style={{ minHeight: "300px", height: "300px" }}
+      style={{ minHeight: "300px", height: "400px" }}
     />
   );
 }
