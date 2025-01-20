@@ -2,23 +2,40 @@
 
 import React, { useContext, useState } from "react";
 import styles from "./css/asidebar.module.css";
-import {
-  MdDashboard,
-  FaList,
-  IoMdList,
-  IoCloseSharp,
-  LuPlusCircle,
-} from "../../_components/ApplicationIcons";
+import { useRouter } from "next/navigation";
+import { IoCloseSharp } from "../../_components/ApplicationIcons";
 import ClickTextBtn from "@/_components/elements/buttons/ClickTextBtn";
 import { AppContext } from "@/_contextApi/AppContext";
 import ClickIconBtn from "@/_components/elements/buttons/ClickIconBtn";
 import AsideNavItemsLinks from "./AsideNavItemsLinks";
 import AsideNavItemClick from "./AsideNavItemClick";
-import UserDetailsAvatar from "@/_components/userAvatars/UserDetailsAvatar";
+import { LogOutAction } from "@/app/utils/authActions";
 
 export default function AsideBar() {
-  const { isSidebarCollapsed, setIsSidebarCollapse, toggleSidebar } =
-    useContext(AppContext);
+  const router = useRouter();
+  const {
+    isSidebarCollapsed,
+    setIsSidebarCollapse,
+    toggleSidebar,
+    isBtnLoadin,
+    setisBtnLoadin,
+  } = useContext(AppContext);
+
+  const handelLogOut = async () => {
+    try {
+      setisBtnLoadin(true);
+      const res = await LogOutAction();
+      if (res.data.status === "success") {
+        console.log(res);
+        router.refresh();
+        router.push("/auth/login");
+        setisBtnLoadin(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setisBtnLoadin(false);
+    }
+  };
 
   return (
     <div
@@ -28,10 +45,12 @@ export default function AsideBar() {
     >
       <div className={styles.top_section}>
         <div className={styles.flex_sb_container}>
-          <UserDetailsAvatar name="Sanjay" email="email@gmail.com" />
+          <div>
+            <h4>Admin</h4>
+          </div>
           <div
             onClick={toggleSidebar}
-            className={`${styles.header_close} medium_semi_bold_text ${
+            className={`${styles.header_close} medium_text ${
               isSidebarCollapsed ? styles.hide_element_collapsed : ""
             }`}
           >
@@ -41,9 +60,6 @@ export default function AsideBar() {
         <div className={styles.aside_option_Container}>
           <div className={styles.aside_link_option_wrapper}>
             <AsideNavItemsLinks />
-          </div>
-          <div className={styles.aside_click_option_wrapper}>
-            <AsideNavItemClick />
           </div>
         </div>
       </div>
@@ -55,14 +71,16 @@ export default function AsideBar() {
             btnLoading={false}
             size="circle_medium_iconBtn"
             fullWidth={false}
+            clickHandel={handelLogOut}
           />
         ) : (
           <ClickTextBtn
             btnText="LOG OUT"
             disabledBtn={false}
-            btnLoading={false}
+            btnLoading={isBtnLoadin}
             size="medium"
             fullWidth={true}
+            clickHandel={handelLogOut}
           />
         )}
       </div>

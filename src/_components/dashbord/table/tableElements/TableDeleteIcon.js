@@ -6,6 +6,8 @@ import { ModelsContext } from "@/_contextApi/ModelContextApi";
 
 export default function TableDeleteIcon(props) {
   const { data, handler } = props;
+
+  console.log("data---", data);
   const { handelOpenDeleteModel } = useContext(ModelsContext);
 
   const handelOpenModel = () => {

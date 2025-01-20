@@ -5,62 +5,65 @@
 
 .navbar_wrapper {
   background-color: var(--th-primary-color);
-  height: 50px;
+  height: var(--th-nav-height);
   position: fixed;
-  margin-left: 300px;
-  width: calc(100% - 300px); /* Add spaces around the minus operator */
-  transition: margin-left width 0.3s ease;
-  padding: 0px 10px;
+  margin-left: var(--th-aside-container-width);
+  width: calc(
+    100% - var(--th-aside-container-width)
+  ); /* Add spaces around the minus operator */
+  transition: margin-left width var(--th-transition-ease-time);
+  padding: 0px var(--th-10px);
   z-index: 8;
 }
 
 .navbar_wrapper_collapsed {
-  margin-left: 70px;
-  width: calc(100% - 70px); /* Add spaces around the minus operator */
+  margin-left: var(--th-collapsed-width);
+  width: calc(
+    100% - var(--th-collapsed-width)
+  ); /* Add spaces around the minus operator */
 }
 
 .asidbar_wrapper {
-  width: 300px;
+  width: var(--th-aside-container-width);
   background-color: var(--th-transparent);
   border-right: 1px var(--ad-border-color);
-  transition: width 0.3s;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 8;
-  transition: width 0.3s ease;
+  transition: width var(--th-transition-ease-time);
 }
 
 .asidbar_wrapper_collapsed {
-  width: 70px;
-  transition: width 0.3s ease;
+  width: var(--th-collapsed-width);
+  transition: width var(--th-transition-ease-time);
 }
 
 .asidebar_inner_wrapper {
   width: 100%;
   height: 100%;
   background-color: var(--th-body-background);
-  transition: width 0.3s ease;
+  transition: width var(--th-transition-ease-time);
   box-shadow: var(--th-box-shadow);
   z-index: 9;
 }
 
 .asidebar_inner_collapsed {
-  width: 70px;
+  width: var(--th-collapsed-width);
   left: 0px;
   background-color: var(--th-body-background);
   box-shadow: var(--th-box-shadow);
 }
 
 .children_wrapper {
-  margin-left: 300px;
-  padding-top: 50px;
+  margin-left: var(--th-aside-container-width);
+  padding-top: var(--th-nav-height);
   transition: margin-left 0.3s ease;
 }
 
 .children_wrapper_collapsed {
-  margin-left: 70px;
+  margin-left: var(--th-collapsed-width);
 }
 
 .footer_wrraper {
@@ -70,7 +73,7 @@
   .navbar_wrapper {
     margin-left: 0px;
     width: 100%;
-    height: 40px;
+    height: var(--th-mobile-nav-height);
     padding: 0px 0px;
   }
   .navbar_wrapper_collapsed {

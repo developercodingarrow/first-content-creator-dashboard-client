@@ -13,6 +13,17 @@
 }
 
 .table_search_wrapper {
-  /* border: 1px solid gray; */
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.search_wrapper {
   width: 200px;
+}
+
+@media (max-width: 768px) {
+  .date_element_wrapper {
+    /* display: none; */
+  }
 }

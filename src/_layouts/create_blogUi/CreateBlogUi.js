@@ -178,7 +178,7 @@ export default function CreateBlogUi(props) {
       </div>
       <section className={styles.top_section}>
         <div className={styles.section_left}>
-          <div className={styles.section_heading}>General</div>
+          <div className={"section_heading mg_bootom_20"}>General</div>
           <div className={styles.form_elements_wrapper}>
             <div className={styles.form_element_Box}>
               <div className={styles.input_lable}>
@@ -219,14 +219,14 @@ export default function CreateBlogUi(props) {
         </div>
         <div className={styles.section_right}>
           <div className={styles.componenet_section}>
-            <div className={styles.section_title}>Thumblin</div>
+            <div className={"section_heading mg_bootom_20"}>Thumblin</div>
             <div className={styles.section_component_wrapper}>
               <SingleImgUplod />
             </div>
           </div>
 
           <div className={styles.componenet_section}>
-            <div className={styles.section_title}>Tags</div>
+            <div className={"section_heading mg_bootom_20"}>Tags</div>
             <div className={styles.section_component_wrapper}>
               <ChipSelector
                 allList={allTags}
@@ -237,7 +237,7 @@ export default function CreateBlogUi(props) {
           </div>
 
           <div className={styles.componenet_section}>
-            <div className={styles.section_title}>Categories</div>
+            <div className={"section_heading mg_bootom_20"}>Categories</div>
             <div className={styles.section_component_wrapper}>
               <ChipSelector
                 allList={allCategories}

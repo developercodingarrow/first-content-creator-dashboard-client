@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styles from "./dashboarduilayouts.module.css";
 import AsideBar from "../layoutel_ements/AsideBar";
 import MainNavBar from "@/_components/navbar/MainNavBar";
@@ -7,8 +7,7 @@ import { AppContext } from "@/_contextApi/AppContext";
 import MainFooter from "@/_components/footer/MainFooter";
 
 export default function DashboardUiLayouts({ children }) {
-  const { isSidebarCollapsed, setIsSidebarCollapse, toggleSidebar } =
-    useContext(AppContext);
+  const { isSidebarCollapsed } = useContext(AppContext);
 
   return (
     <div className={styles.main_container}>

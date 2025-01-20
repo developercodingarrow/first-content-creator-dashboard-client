@@ -12,15 +12,12 @@ export default function MainNavBar() {
   return (
     <div className={styles.main_container}>
       <div className={styles.inner_sb_container}>
-        <div className={styles.navBar_left}>
+        <div>
           <NavHangBug />
         </div>
         <div className={styles.navBar_right}>
-          <div className={styles.navBar_linkNavigation_wrapper}>
+          <div>
             <NavBarNavigationLinks />
-          </div>
-          <div className={styles.navbar_click_navigation_wrapper}>
-            <NavBarNavigationClick />
           </div>
 
           <div className={styles.navBar_user_avatar_wrapper}>

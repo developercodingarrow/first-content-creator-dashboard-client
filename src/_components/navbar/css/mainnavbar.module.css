@@ -10,14 +10,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0px 10px;
-  padding-right: 20px;
-}
-.navBar_right {
-  display: flex;
+  padding-left: 0px var(--th-10px);
+  padding-right: var(--th-10px);
 }
 
-.navBar_linkNavigation_wrapper {
+.navBar_right {
   display: flex;
 }
 
@@ -26,60 +23,16 @@
 }
 
 .navBar_user_avatar_wrapper {
-  /* border: 1px solid #fff; */
-  margin-left: 10px;
+  margin-left: var(--th-10px);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.NavBar_hanbug_icon_Wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  cursor: pointer;
-  color: var(--th-body-background);
-  font-size: 20px;
-}
-
-.NavBar_hanbug_icon_Wrapper:hover {
-  background-color: var(--th-body-background);
-  color: var(--th-primary-color);
-  border-radius: 5px;
-}
-
-.link_navigiation_wrapper {
-  display: flex;
-}
-
-.navBar_link_icon_navItem {
-  padding: 10px;
-  cursor: pointer;
-  color: var(--th-body-background);
-  font-size: 20px;
-}
-
-.navBar_link_icon_navItem:hover {
-  background-color: var(--th-body-background);
-  color: var(--th-primary-color);
-  border-radius: 5px;
-}
-
-.user_avtar_wrapper {
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
 }
 
 .icon_box {
-  color: #fff;
-  font-size: 20px;
+  color: var(--th-body-background);
+  font-size: var(--th-20px);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -101,6 +54,54 @@
   opacity: 0; /* Hide by default */
   visibility: hidden; /* Prevent interaction when hidden */
   transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* NavHangBug  start*/
+
+.NavBar_hanbug_icon_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--th-10px);
+  cursor: pointer;
+  color: var(--th-body-background);
+  font-size: var(--th-20px);
+}
+
+.NavBar_hanbug_icon_Wrapper:hover {
+  background-color: var(--th-body-background);
+  color: var(--th-primary-color);
+  border-radius: 5px;
+}
+/* NavHangBug End */
+
+/* NavBarNavigationLinks Start */
+
+.link_navigiation_wrapper {
+  display: flex;
+}
+
+.navBar_link_icon_navItem {
+  padding: var(--th-10px);
+  cursor: pointer;
+  color: var(--th-body-background);
+  font-size: var(--th-20px);
+}
+
+.navBar_link_icon_navItem:hover {
+  background-color: var(--th-body-background);
+  color: var(--th-primary-color);
+  border-radius: 5px;
+}
+
+.user_avtar_wrapper {
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
 /* NavMainDropDown */

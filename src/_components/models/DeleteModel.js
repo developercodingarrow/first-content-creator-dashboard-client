@@ -12,38 +12,39 @@ export default function DeleteModel(props) {
     useContext(ModelsContext);
   return (
     <>
-      {isDeleteModel && (
-        <div className={styles.model_full_container}>
-          <div className={styles.model_container}>
-            <ModelHeader
-              modelTitle="Delete Model"
-              modelCloseHandler={handelCloseDeleteModel}
-            />
-            <div className={styles.model_body}>
-              Are You Sure to Delete Then delete Other Wise clcik on Cancel....
-              ?
-            </div>
-            {/* <div className={styles.model_footer}>
-              <ClickTextBtn
-                btnText="Cancel"
-                disabledBtn={false}
-                btnLoading={false}
-                size="medium"
-                clickHandel={handelCloseDeleteModel}
-              />
-
-              <ClickTextBtn
-                btnText="Delete"
-                disabledBtn={false}
-                btnLoading={false}
-                size="medium"
-                clickHandel={actionHandler}
-              />
-            </div> */}
-            <ModelCommanFooter modelCloseHandler={handelCloseDeleteModel} />
+      <div
+        className={`${styles.model_full_container} ${
+          isDeleteModel ? styles.visible : ""
+        }`}
+      >
+        <div className={styles.model_container}>
+          <ModelHeader
+            modelTitle="Delete Model"
+            modelCloseHandler={handelCloseDeleteModel}
+          />
+          <div className={styles.model_body}>
+            Are You Sure to Delete Then delete Other Wise clcik on Cancel.... ?
           </div>
+          <div className={styles.model_footer}>
+            <ClickTextBtn
+              btnText="Cancel"
+              disabledBtn={false}
+              btnLoading={false}
+              size="medium"
+              clickHandel={handelCloseDeleteModel}
+            />
+
+            <ClickTextBtn
+              btnText="Delete"
+              disabledBtn={false}
+              btnLoading={false}
+              size="medium"
+              clickHandel={actionHandler}
+            />
+          </div>
+          <ModelCommanFooter modelCloseHandler={handelCloseDeleteModel} />
         </div>
-      )}
+      </div>
     </>
   );
 }

@@ -60,3 +60,78 @@
 .view_link:hover {
   color: var(--th-primary-hover-color);
 }
+
+.single_image_wrapper {
+  border: 1px solid var(--ad-border-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.img_style {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.draft {
+  color: #f59e0b;
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 14px;
+  background-color: #f59e0b1a;
+  text-transform: capitalize;
+}
+
+.published {
+  color: #10b981;
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 1.4rem;
+  background-color: #10b9811a;
+  text-transform: capitalize;
+}
+
+.pending {
+  color: #fbbf24;
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 1.4rem;
+  background-color: #fbbf241a;
+  text-transform: capitalize;
+}
+
+.active {
+  color: #3b82f6;
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  background-color: #3b82f61a;
+  text-transform: capitalize;
+}
+
+.moderation_review {
+  color: #e11d48; /* Change text color to red-pink */
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 14px;
+  background-color: #e11d481a; /* Red-pink background */
+  text-transform: capitalize;
+}
+
+.suspension {
+  color: #6b7280; /* Change text color to gray */
+  border-color: #0000;
+  border-radius: 5px;
+  padding: 5px 6.5px;
+  font-size: 14px;
+  background-color: #6b72801a; /* Gray background */
+  text-transform: capitalize;
+}
+
+/*  */

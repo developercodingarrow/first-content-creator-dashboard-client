@@ -7,10 +7,7 @@ export default function TablePageRedirect(props) {
   const { data, path } = props;
   return (
     <div>
-      <Link
-        href={`/${path}`}
-        className={`${styles.view_link} medium_normall_text`}
-      >
+      <Link href={`/${path}`} className={`${styles.view_link} small_text`}>
         view
       </Link>
     </div>

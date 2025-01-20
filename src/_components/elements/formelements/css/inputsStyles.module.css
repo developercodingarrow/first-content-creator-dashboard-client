@@ -1,12 +1,21 @@
 .input_style {
   background: none;
   width: 100%;
-  padding: 12px 12px;
-  border-radius: 8px;
-  border: 1px solid #afafaf;
+  border: 1px solid var(--th-bold-gray-border);
   outline: none;
-  font-size: 16px;
   color: var(--th-blod-gray-text);
+  font-family: var(--th-font-family);
+}
+
+.small {
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.medium {
+  padding: 1.2rem 0.5rem;
+  border-radius: var(--th-5px);
+  font-size: 1.6rem;
 }
 
 .editor_style {
@@ -29,9 +38,47 @@
   border: none !important;
 }
 
+.Password_input_wrapper {
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.pass_input_style {
+  background: none;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 12px;
+  color: var(--th-blod-gray-text);
+  font-family: var(--font-poppins);
+}
+
+.passInput_icon_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--th-blod-gray-text);
+}
+
+.small {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 600px) {
   .input_style {
     padding: 10px 10px;
     border-radius: 5px;
+  }
+  .medium {
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
   }
 }

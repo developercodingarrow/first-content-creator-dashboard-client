@@ -8,6 +8,8 @@ export default function ModelContextProvider({ children }) {
   const [actionHandler, setActionHandler] = useState(null);
   const [isDeleteModel, setisDeleteModel] = useState(false);
   const [isSingleImgModel, setisSingleImgModel] = useState(false);
+  const [isCreateInputModel, setisCreateInputModel] = useState(false);
+  const [isMobileDateModel, setisMobileDateModel] = useState(false);
 
   const handelOpenDeleteModel = (data, handler) => {
     setactionID(data);
@@ -25,6 +27,22 @@ export default function ModelContextProvider({ children }) {
   const handleCloseSingleImgModel = () => {
     setisSingleImgModel(false);
   };
+
+  const handelOpenCreateInputModel = () => {
+    setisCreateInputModel(true);
+  };
+
+  const handelCloseCreateInputModel = () => {
+    setisCreateInputModel(false);
+  };
+
+  const handelOpenMobileDateModel = () => {
+    setisMobileDateModel(true);
+  };
+
+  const handelCloseMobileDateModel = () => {
+    setisMobileDateModel(false);
+  };
   return (
     <ModelsContext.Provider
       value={{
@@ -37,6 +55,14 @@ export default function ModelContextProvider({ children }) {
         setisSingleImgModel,
         handleOpenSingleImgModel,
         handleCloseSingleImgModel,
+        isCreateInputModel,
+        setisCreateInputModel,
+        handelOpenCreateInputModel,
+        handelCloseCreateInputModel,
+        isMobileDateModel,
+        setisMobileDateModel,
+        handelOpenMobileDateModel,
+        handelCloseMobileDateModel,
       }}
     >
       {" "}

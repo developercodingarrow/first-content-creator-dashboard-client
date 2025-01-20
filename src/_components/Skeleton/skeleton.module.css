@@ -1,0 +1,21 @@
+.table_column_bar {
+  border: 1px solid #f0f0f0;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+.table_column_bar::after {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

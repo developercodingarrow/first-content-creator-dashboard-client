@@ -2,7 +2,16 @@
 import React, { useContext, useState } from "react";
 import styles from "./css/asidbarnavItemsLinks.module.css";
 import { AppContext } from "@/_contextApi/AppContext";
-import { MdDashboard, FaList } from "../../_components/ApplicationIcons";
+import {
+  MdDashboard,
+  TiDocumentText,
+  FaUser,
+  FaList,
+  FaHashtag,
+  MdError,
+  LuDatabaseBackup,
+  MdOutlineStorage,
+} from "../../_components/ApplicationIcons";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname
 export default function AsideNavItemsLinks() {
@@ -18,9 +27,39 @@ export default function AsideNavItemsLinks() {
       hrfLink: "/",
     },
     {
+      text: "All Users",
+      icon: <FaUser />,
+      hrfLink: "/dashboard/users",
+    },
+    {
       text: "Blogs",
-      icon: <FaList />,
+      icon: <TiDocumentText />,
       hrfLink: "/dashboard/blogs",
+    },
+    {
+      text: "Repored Blogs",
+      icon: <MdError />,
+      hrfLink: "/dashboard/reported-blogs",
+    },
+    {
+      text: "Featured Tag",
+      icon: <FaHashtag />,
+      hrfLink: "/dashboard/featured-tag",
+    },
+    {
+      text: "Verification Tag",
+      icon: <FaHashtag />,
+      hrfLink: "/dashboard/Verification-tag",
+    },
+    {
+      text: "Backup Data",
+      icon: <MdOutlineStorage />,
+      hrfLink: "/dashboard/backups",
+    },
+    {
+      text: "Full Backup",
+      icon: <LuDatabaseBackup />,
+      hrfLink: "/dashboard/full-backup",
     },
   ];
 
@@ -32,7 +71,7 @@ export default function AsideNavItemsLinks() {
           <Link
             href={`${el.hrfLink}`}
             key={index}
-            className={`${styles.aside_nav_item} medium_semi_bold_text  ${
+            className={`${styles.aside_nav_item} medium_light_text  ${
               isActive ? styles.active_link : ""
             }`}
           >

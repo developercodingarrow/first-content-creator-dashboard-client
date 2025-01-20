@@ -9,6 +9,7 @@ export default function ClickTextBtn(props) {
     disabledBtn,
     btnLoading = false, // Default is not loading
     size = "medium", // Default size
+    btnType = "fill_type_btn",
     fullWidth = false, // Default is not full width
     clickHandel,
   } = props;
@@ -24,7 +25,7 @@ export default function ClickTextBtn(props) {
     <div className={Styles.btn_wrapper}>
       <button
         type="button"
-        className={`${Styles.btn_style} ${Styles[size]} ${
+        className={`${Styles.btn_style} ${Styles[btnType]} ${Styles[size]} ${
           fullWidth ? Styles.fullWidth : ""
         } ${btnLoading ? "loading" : ""}`}
         disabled={disabledBtn || btnLoading} // Disable button during loading

@@ -1,0 +1,39 @@
+.main_container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.inner_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_wrapper_container {
+  border: 1px solid var(--th-thin-gray-border);
+  background-color: #fff;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.container_header {
+  border-bottom: 1px solid var(--th-thin-gray-border);
+  padding: var(--th-15px);
+}
+
+.form_wrraper {
+  padding: var(--th-15px);
+}
+
+.form_input_wrapper {
+  margin-bottom: var(--th-20px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container_header {
+    border-bottom: 1px solid var(--th-thin-gray-border);
+    padding: var(--th-15px);
+  }
+}

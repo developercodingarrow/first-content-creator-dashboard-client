@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: var(--th-body-background);
+  color: #1f2937;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--th-primary-color);
+  font-family: var(--th-font-family);
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--th-text-gray);
+  font-family: var(--th-font-family);
+}
+
+.link {
+  font-family: var(--th-font-family);
+  font-size: 1.2rem;
+  color: var(--th-primary-color);
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #1d4ed8;
+}

@@ -4,7 +4,7 @@ import styles from "./css/chipselector.module.css";
 import SuggestList from "@/_components/search_elements/SuggestList";
 import SimpleInput from "../elements/formelements/SimpleInput";
 export default function ChipSelector(props) {
-  const { allList, filedName, placeholder } = props;
+  const { allList, filedName, placeholder, size = "medium" } = props;
   const [newValue, setnewValue] = useState("");
   const [fillterList, setfillterList] = useState([]);
   const [list, setlist] = useState("");
@@ -38,7 +38,7 @@ export default function ChipSelector(props) {
   };
   return (
     <div className={styles.main_conatiner}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles[size]} `}>
         <div className={styles.tagContainer}>
           {tags.map((tag, index) => (
             <div key={index} className={styles.chip}>

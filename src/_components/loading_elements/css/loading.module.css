@@ -1,0 +1,39 @@
+.btnLoadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Light gray */
+  border-top: 3px solid #ffffff; /* White */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.8rem; /* Space between the spinner and the text */
+}
+
+.medium {
+  width: 2rem;
+  height: 2rem;
+}
+
+.large {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .large {
+    width: 2rem;
+    height: 2rem;
+  }
+}

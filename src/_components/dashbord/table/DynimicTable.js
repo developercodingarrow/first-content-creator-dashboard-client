@@ -8,6 +8,13 @@ import TableBooleanSwitchBtn from "./tableElements/TableBooleanSwitchBtn";
 import TablePopulatedText from "./tableElements/TablePopulatedText";
 import TablePageRedirect from "./tableElements/TablePageRedirect";
 import TableDeleteIcon from "./tableElements/TableDeleteIcon";
+import TableUserAvator from "./tableElements/TableUserAvator";
+import TableDate from "./tableElements/TableDate";
+import TableSingleImg from "./tableElements/TableSingleImg";
+import TableNumberText from "./tableElements/tableNumberText";
+import TablemultiStatus from "./tableElements/tablemultiStatus";
+import SkeletonTableBar from "@/_components/Skeleton/SkeletonTableBar";
+import ThreeStateSwitchBtn from "./tableElements/ThreeStateSwitchBtn";
 
 export default function DynimicTable(props) {
   const {
@@ -48,7 +55,7 @@ export default function DynimicTable(props) {
           <tr>
             {tableColumns.map((column, index) => {
               return (
-                <th key={column.id}>
+                <th key={column.id} className={styles.tableTh}>
                   <span className={styles.th_span_style}>
                     {column.label}
                     {column.icon && (
@@ -79,7 +86,9 @@ export default function DynimicTable(props) {
                 return (
                   <td key={index}>
                     {" "}
-                    <p>loading skalation</p>
+                    <div>
+                      <SkeletonTableBar />
+                    </div>
                   </td>
                 );
               })}
@@ -141,16 +150,22 @@ const renderCellContent = (
       className = "numberCell";
       break;
     case "text":
-      content = (
-        <TextElements text={elemnetdata} textStyle="medium_normall_text " />
-      );
+      content = <TextElements text={elemnetdata} textStyle="small_text" />;
       className = "";
+      break;
+    case "date":
+      content = <TableDate data={elemnetdata} textStyle="small_text" />;
+      className = "";
+      break;
+    case "numberText":
+      content = <TableNumberText data={elemnetdata} />;
+
       break;
     case "blodText":
       content = (
         <TextElements
-          text={elemnetdata}
-          textStyle="medium_normall_text capitalize_text"
+          data={elemnetdata}
+          textStyle="small_text capitalize_text"
         />
       );
       className = "text-cell";
@@ -159,10 +174,28 @@ const renderCellContent = (
       content = <TableBooleanStatus data={elemnetdata} />;
       className = "boolean_status_cell";
       break;
+
+    case "multiStatus":
+      content = <TablemultiStatus data={elemnetdata} />;
+      break;
     case "booleanSwicthBtn":
       if (handler) {
         content = (
           <TableBooleanSwitchBtn
+            data={elemnetdata}
+            keyProp={keyProp}
+            id={completeData._id}
+            handler={handler}
+          />
+        );
+      }
+      className = "boolean_switch_cell";
+      break;
+
+    case "threeStateSwitchBtn":
+      if (handler) {
+        content = (
+          <ThreeStateSwitchBtn
             data={elemnetdata}
             keyProp={keyProp}
             completeData={completeData}
@@ -170,7 +203,6 @@ const renderCellContent = (
           />
         );
       }
-      className = "boolean_switch_cell";
       break;
 
     case "populatedText":
@@ -195,6 +227,16 @@ const renderCellContent = (
       if (handler) {
         content = <TableDeleteIcon data={elemnetdata} handler={handler} />;
       }
+      break;
+
+    case "userAvator":
+      content = <TableUserAvator data={elemnetdata} />;
+      className = "";
+      break;
+
+    case "singleImg":
+      content = <TableSingleImg data={elemnetdata} imgDirectory="" />;
+      className = "";
       break;
 
     default:

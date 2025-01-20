@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./css/mainnavbar.module.css";
-import { MdDashboard, FaList } from "../../_components/ApplicationIcons";
+import {
+  MdDashboard,
+  TiDocumentText,
+} from "../../_components/ApplicationIcons";
 import Link from "next/link";
 export default function NavBarNavigationLinks() {
   const navbarIconOptions = [
@@ -9,8 +12,8 @@ export default function NavBarNavigationLinks() {
       hrfLink: "/",
     },
     {
-      icon: <FaList />,
-      hrfLink: "/",
+      icon: <TiDocumentText />,
+      hrfLink: "/dashboard/blogs",
     },
   ];
 
@@ -19,6 +22,7 @@ export default function NavBarNavigationLinks() {
       {navbarIconOptions.map((el, index) => {
         return (
           <Link
+            key={index}
             href={`${el.hrfLink}`}
             className={styles.navBar_link_icon_navItem}
           >

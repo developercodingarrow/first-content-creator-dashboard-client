@@ -1,0 +1,72 @@
+.date_range_container {
+  background-color: rgb(244 244 245 /1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+  z-index: 5;
+}
+
+.calender_btn {
+  font-size: 1.4rem;
+}
+
+.date_rangeBox {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  background-color: #fff;
+}
+
+.date_range_container:hover {
+  border: 2px solid rgb(244 244 245 / 1);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.close_bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--th-10px);
+  font-size: 1.6rem;
+}
+
+.rdrDefinedRangesWrapper {
+  font-size: 12px;
+  width: 226px !important;
+  border-right: solid 1px #eff2f7;
+  background: #fff;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .date_rangeBox {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .calender_btn {
+    font-size: 1rem;
+  }
+
+  .rdrCalendarWrapper {
+    width: 100%; /* Make it full-width on mobile */
+    max-width: 350px; /* Add max-width for better control */
+  }
+
+  .rdrDateDisplayWrapper {
+    flex-direction: column !important; /* Stack the date range inputs vertically */
+  }
+
+  .rdrDefinedRangesWrapper {
+    display: none !important; /* Hide predefined ranges if not needed */
+  }
+}

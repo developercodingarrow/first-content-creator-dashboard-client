@@ -7,7 +7,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.3); /* Light translucent border */
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   background: rgba(255, 255, 255, 0.2); /* Transparent white background */
   backdrop-filter: blur(5px); /* Glass-like blur effect */
   -webkit-backdrop-filter: blur(5px); /* Safari support for blur effect */
@@ -15,6 +15,16 @@
   border-radius: 8px; /* Optional for smoother edges */
   display: flex;
   justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.9); /* Slightly shrink initially */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Prevent clicks when hidden */
+}
+
+.model_full_container.visible {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Full size */
+  pointer-events: all; /* Enable interactions */
 }
 
 .model_container {

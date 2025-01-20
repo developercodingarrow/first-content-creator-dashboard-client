@@ -1,41 +1,52 @@
 import React from "react";
 import styles from "./css/mainfooter.module.css";
 import Link from "next/link";
-import { MdDashboard } from "../ApplicationIcons";
+import {
+  MdDashboard,
+  TiDocumentText,
+  FaUser,
+  FaHashtag,
+} from "../ApplicationIcons";
 
 export default function MobileFooter() {
+  const footerOptions = [
+    {
+      icon: <MdDashboard />,
+      text: "Home",
+      hrfLink: "/",
+    },
+    {
+      icon: <TiDocumentText />,
+      text: "Blogs",
+      hrfLink: "/dashboard/blogs",
+    },
+    {
+      icon: <FaUser />,
+      text: "Users",
+      hrfLink: "/dashboard/users",
+    },
+    {
+      icon: <FaHashtag />,
+      text: "Tags",
+      hrfLink: "/dashboard/featured-tag",
+    },
+  ];
+
   return (
     <div className={styles.mobile_footer_container}>
-      <Link href={"/"} className={styles.footer_link}>
-        <div className={styles.footer_icon}>
-          <MdDashboard />
-        </div>
+      {footerOptions.map((el, index) => {
+        return (
+          <Link
+            href={`${el.hrfLink}`}
+            className={styles.footer_link}
+            key={index}
+          >
+            <div className={styles.footer_icon}>{el.icon}</div>
 
-        <span className={styles.small_text}>Home</span>
-      </Link>
-      <Link href={"/dashboard/blogs"} className={styles.footer_link}>
-        <div className={styles.footer_icon}>
-          <MdDashboard />
-        </div>
-
-        <span className={styles.small_text}>Home</span>
-      </Link>
-
-      <Link href={"/"} className={styles.footer_link}>
-        <div className={styles.footer_icon}>
-          <MdDashboard />
-        </div>
-
-        <span className={styles.small_text}>Home</span>
-      </Link>
-
-      <Link href={"/"} className={styles.footer_link}>
-        <div className={styles.footer_icon}>
-          <MdDashboard />
-        </div>
-
-        <span className={styles.small_text}>Home</span>
-      </Link>
+            <span className={styles.small_text}>{el.text}</span>
+          </Link>
+        );
+      })}
     </div>
   );
 }

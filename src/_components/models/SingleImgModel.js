@@ -75,6 +75,7 @@ export default function SingleImgModel() {
                             inputPlaceholder="Enter Image Title"
                             inputName="title"
                             inputChnageHandler={handelChange}
+                            inputSize="small"
                           />
                         </div>
                         <span className={styles.error_msg}>{errors.title}</span>
@@ -88,6 +89,7 @@ export default function SingleImgModel() {
                             inputPlaceholder="Enter Image Alt text"
                             inputName="altText"
                             inputChnageHandler={handelChange}
+                            inputSize="small"
                           />
                         </div>
                         <span className={styles.error_msg}>
@@ -104,6 +106,7 @@ export default function SingleImgModel() {
                             inputPlaceholder="Enter Image caption"
                             inputName="caption"
                             inputChnageHandler={handelChange}
+                            inputSize="small"
                           />
                         </div>
                         <span className={styles.error_msg}>
